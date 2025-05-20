@@ -1,0 +1,91 @@
+{
+  "Routes": [
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "iam-service",
+          "Port": 8012
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/{everything}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/iam/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "commerce-service",
+          "Port": 8013
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/{everything}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/commerce/everything",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "monitoring-service",
+          "Port": 8014
+        }
+      ],
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/v1/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamPathTemplate": "/monitoring/{everything}"
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "communication-service",
+          "Port": 8015
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/{everything}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamPathTemplate": "/communication/{everything}"
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "supplymng-service",
+          "Port": 8016
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/{everything}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamPathTemplate": "/supplymng/{everything}"
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "resourcemng-service",
+          "Port": 8017
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/{everything}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamPathTemplate": "/resourcemng/{everything}"
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "profiles-service",
+          "Port": 8018
+        }
+      ],
+      "DownstreamPathTemplate": "/api/v1/{everything}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamPathTemplate": "/profiles/{everything}"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:8000"
+  }
+}
